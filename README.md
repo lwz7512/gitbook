@@ -106,7 +106,7 @@ a typical book directory structure is:
 
 ```
 
-4. EACH chapter or part include ONE `README.md` file, and this file reference all the asset file in this chapter, or the asset file can not be visible.
+4. EACH chapter or part include ONE `README.md` file, and this file reference all the asset file in this chapter, or the asset file can be invisible.
 
 
 
