@@ -1,30 +1,52 @@
-> ## ⚠️ Deprecation warning:
-> As the efforts of the GitBook team are focused on the [GitBook.com](https://www.gitbook.com) platform, the CLI is no longer under active development.  
-> All content supported by the CLI are mostly supported by our [GitBook.com / GitHub integration](https://docs.gitbook.com/integrations/github).  
-> Content hosted on the [legacy.gitbook.com](https://legacy.gitbook.com) will continue working until further notice. For differences with the new vesion, check out our [documentation](https://docs.gitbook.com/v2-changes/important-differences).
-
-
-GitBook
+GitBook - TL version 
 =======
 
-[![NPM version](https://badge.fury.io/js/gitbook.svg)](http://badge.fury.io/js/gitbook)
-[![Linux Build Status](https://travis-ci.org/GitbookIO/gitbook.png?branch=master)](https://travis-ci.org/GitbookIO/gitbook)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/63nlflxcwmb2pue6?svg=true)](https://ci.appveyor.com/project/GitBook/gitbook)
-[![Slack Status](https://slack.gitbook.com/badge.svg)](https://slack.gitbook.com)
+gitbook library `true love` version @2018/12/30 based on gitbook v3.2.3
 
-GitBook is a command line tool (and Node.js library) for building beautiful books using GitHub/Git and Markdown (or AsciiDoc). Here is an example: [Learn Javascript](https://legacy.gitbook.com/book/GitBookIO/javascript).
 
-You can publish and host books easily online using [gitbook.com](https://legacy.gitbook.com). A desktop editor is [also available](https://legacy.gitbook.com/editor).
+using [theme-default](https://github.com/lwz7512/theme-default) fix version to load asset file in document.
 
-Stay updated by following [@GitBookIO](https://twitter.com/GitBookIO) on Twitter or [GitBook](https://www.facebook.com/gitbookcom) on Facebook.
 
-Complete documentation is available at [toolchain.gitbook.com](http://toolchain.gitbook.com/).
+## Installation
 
-![Image](https://raw.github.com/GitbookIO/gitbook/master/preview.png)
+```
+# install command tool
+$ npm install -g gitbook-cli
+$ cd ~/your/work/path
+# install gitbook library
+$ git clone https://github.com/lwz7512/gitbook.git
+# install dependency
+$ yarn
+# assign your cloned gitbok as latest version
+$ gitbook alias ~/your/work/path/gitbook latest
+```
 
-## Getting started
+## Creat your book with mobile screen support
 
-GitBook can be used either on your computer for building local books or on legacy.gitbook.com for hosting them. To get started, check out [the installation instructions in the documentation](docs/setup.md).
+```
+$ gitbook init mybook
+$ cd mybook
+$ gitbook serve --gitbook=latest --log=debug
+# then open browser to view your book, modify and see auto-refresh result..
+```
+
+## Output your book
+
+in your book directory:
+
+```
+$ gitbook build --log=debug
+```
+_book directory holds the generated web pages...
+
+or outside your book directory:
+
+```
+$ gitbook build ./ ./output --log=debug
+```
+
+book are generated as web pages in mybook/output directory.
+
 
 ## Usage examples
 
@@ -34,7 +56,7 @@ You can find a [list of real-world examples](docs/examples.md) in the documentat
 
 ## Help and Support
 
-We're always happy to help out with your books or any other questions you might have. You can ask a question on the following contact form at [gitbook.com/contact](https://legacy.gitbook.com/contact) or signal an issue on [GitHub](https://github.com/GitbookIO/gitbook).
+We're always happy to help out with your books or any other questions you might have. You can ask a question on the following contact form at [gitbook.com/contact](https://www.gitbook.com/contact) or signal an issue on [GitHub](https://github.com/GitbookIO/gitbook).
 
 ## Features
 
@@ -50,7 +72,7 @@ We're always happy to help out with your books or any other questions you might 
 
 ## Publish your book
 
-The platform [legacy.gitbook.com](https://legacy.gitbook.com/) is like an "Heroku for books": you can create a book on it (public, or private) and update it using **git push**.
+The platform [GitBook.com](https://www.gitbook.com/) is like an "Heroku for books": you can create a book on it (public, or private) and update it using **git push**.
 
 ## Licensing
 

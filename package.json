@@ -1,8 +1,8 @@
 {
   "name": "gitbook",
-  "version": "3.2.3",
+  "version": "3.2.4",
   "homepage": "https://legacy.gitbook.com",
-  "description": "Library and cmd utility to generate GitBooks",
+  "description": "gitbook library community maintenance version namely true-love verion...",
   "main": "lib/index.js",
   "browser": "./lib/browser.js",
   "dependencies": {
@@ -29,7 +29,7 @@
     "gitbook-plugin-lunr": "1.2.0",
     "gitbook-plugin-search": "2.2.1",
     "gitbook-plugin-sharing": "1.0.2",
-    "gitbook-plugin-theme-default": "1.0.7",
+    "gitbook-plugin-theme-default": "git+https://github.com/lwz7512/theme-default.git#master",
     "github-slugid": "1.0.1",
     "graceful-fs": "4.1.4",
     "i18n-t": "1.0.1",
@@ -95,6 +95,10 @@
     {
       "name": "Samy Pessé",
       "email": "samy@gitbook.com"
+    },
+    {
+      "name": "lwz7512",
+      "email": "lwz7512@gmail.com"
     }
   ]
 }
