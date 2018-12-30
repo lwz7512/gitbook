@@ -8,10 +8,17 @@ using [theme-default](https://github.com/lwz7512/theme-default) fix version to l
 
 [DEMO](http://yanhuang.space/)
 
-## Features
 
-* Large scale page generation `NEW FEATURE SINCE 3.2.4` 
-* drill down navigation in page content `NEW FEATURE SINCE 3.2.4` 
+## Features at 3.2.4
+
+* Large scale page generation.
+* drill down navigation in page content.
+* page auto generation and refresh after change.
+* asset file auto copy after change.
+
+
+## Features below 3.2.3
+
 * mobile screen support
 * Write using [Markdown](http://toolchain.gitbook.com/syntax/markdown.html) or [AsciiDoc](http://toolchain.gitbook.com/syntax/asciidoc.html)
 * Output as a website or [ebook](http://toolchain.gitbook.com/ebook.html)
@@ -47,7 +54,63 @@ $ gitbook serve --gitbook=latest --log=debug
 # then open browser to view your book, modify and see auto-refresh result..
 ```
 
-## Output your book
+## Conventions for book config
+
+1. create `book.json` in your book directory
+
+```
+{
+  "title": "Your Book Title",
+  "root": "./docs",
+}
+
+```
+
+> root property MUST BE `./docs` currently!
+
+if you create chinese content ,add "language": "zh" below the "root": "./docs"
+
+2. MOVE all the content into `./docs` directory include README.md, SUMMARY.md ....
+
+a typical book directory structure is:
+
+```
+|- mybook
+    |- docs
+       - README.md
+       - SUMMARY.md
+       |- chapter1
+         - README.md
+         - some-html-snippet.html
+         - ormarkdown.md
+         - ...
+       |- chapter2
+       |- chaptern
+       ...
+```
+
+
+3. `SUMMARY.md` include all the chapter's `README.md`  like this:
+
+```
+# 栏目汇总
+
+
+* [Part I - 文荟苑](./part1/README.md)
+
+* [Part Ⅳ - 争鸣录](part4/README.md)
+
+* [Part Ⅴ - 口述史](part5/README.md)
+
+* [Part Ⅶ - 文章精萃](part7/README.md)
+
+```
+
+4. EACH chapter or part include ONE `README.md` file, and this file include all the asset file in this chapter.
+
+
+
+## Output/Publish your book
 
 in your book directory:
 
