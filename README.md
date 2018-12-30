@@ -68,7 +68,7 @@ $ gitbook serve --gitbook=latest --log=debug
 
 > root property MUST BE `./docs` currently!
 
-if you create chinese content ,add "language": "zh" below the "root": "./docs"
+if you create chinese content, add "language": "zh" below the "root": "./docs"
 
 2. MOVE all the content into `./docs` directory include README.md, SUMMARY.md ....
 
@@ -106,7 +106,8 @@ a typical book directory structure is:
 
 ```
 
-4. EACH chapter or part include ONE `README.md` file, and this file include all the asset file in this chapter.
+4. EACH chapter or part include ONE `README.md` file, and this file reference all the asset file in this chapter, or the asset file can not be visible.
+
 
 
 
